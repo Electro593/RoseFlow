@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="styles/main.css">
+      <title>RoseFlow</title>
+   </head>
+   
+   <body id="schedulePage">
+      <img id="menuIcon" src="images/menu_white.svg">
+      
+      <nav>
+         <div id="menuPlaceholder"></div>
+         
+         <div id="termSelector">
+            <div id="termSelectorHeader">
+               <span id="termSelectorLabel">Term:</span>
+               <img id="termSelectorArrow" src="images/dropdown.svg">
+            </div>
+            <div id="termDropdownWrapper">
+               <div id="termDropdown">
+               </div>
+            </div>
+         </div>
+         <span id="favoritesLabel">Saved Schedules</span>
+         
+         <div>
+            <img id="filter" src="images/filter.svg">
+         </div>
+      </nav>
+      
+      <div id="menuPage">
+         <div id="menuList">
+            <div class="menu-list-item menu-list-active">
+               <span>Schedule Listing</span>
+               <img class="chevron-right" src="images/chevron_right.svg">
+            </div>
+            <div class="menu-list-item">
+               <span>Favorites</span>
+               <img class="chevron-right" src="images/chevron_right.svg">
+            </div>
+            <div class="menu-sublist">
+            </div>
+         </div>
+         
+         <button id="logOutButton" type="button" class="red-button">Log Out</button>
+      </div>
+      
+      <main>
+         <div id="displayPage">
+            <div id="displayHeader">
+               <h2 id="scheduleIndex">Schedule 0 out of 0</h2>
+               <img id="favoriteStar" src="images/star_gray.svg">
+            </div>
+            
+            <div id="displayMain">
+               <div id="table-" class="display-table">
+                  <div></div>
+                  <div class="table-header">Monday</div>
+                  <div class="table-header">Tuesday</div>
+                  <div class="table-header">Wednesday</div>
+                  <div class="table-header">Thursday</div>
+                  <div class="table-header">Friday</div>
+                  
+                  <div class="table-header">8am</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  
+                  <div class="table-header">9am</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  
+                  <div class="table-header">10am</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  
+                  <div class="table-header">11am</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  
+                  <div class="table-header">12pm</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  
+                  <div class="table-header">1pm</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  
+                  <div class="table-header">2pm</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  
+                  <div class="table-header">3pm</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  
+                  <div class="table-header">4pm</div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+            
+            <div id="displayArrows">
+               <div class="circle">
+                  <img src="images/arrow_left.svg">
+               </div>
+               <div id="tableName">
+                  <input type="text" id="tableNameInput" placeholder="Unnamed">
+               </div>
+               <div class="circle">
+                  <img src="images/arrow_right.svg">
+               </div>
+            </div>
+         </div>
+         
+         <div id="keyPage">
+            <span id="displayKeyLabel">Key:</span>
+            
+            <div id="displayKeyEntryList">
+            </div>
+         </div>
+         
+         <div id="filterPage">
+            <div id="filterPageContent">
+               <div id="filterList">
+                  <h1>Filters</h1>
+                  
+                  <div class="filter-section">
+                     <h2>Change Courses</h2>
+                     <img class="filter-arrow" src="images/expand_gray.svg">
+                  </div>
+                  <div class="filter-content" id="changeCourses">
+                     &nbsp;
+                  </div>
+                  
+                  <div class="filter-section" id="profSection">
+                     <h2>Select Professors</h2>
+                     <img class="filter-arrow" src="images/expand_gray.svg">
+                  </div>
+                  <div class="filter-content" id="professors">
+                     <h3>Select a course:</h3>
+                     <div id="profSections">
+                        <div class="courseNames" id="prof">
+                           &nbsp;
+                        </div>
+                        <div id="profDiv">
+                           <p id="profCourseName"></p>
+                           <div id="profCheckboxes">
+                              &nbsp;
+                           </div>
+                        </div> 
+                     </div>
+                  </div>
+                  
+                  <div class="filter-section">
+                     <h2>Change Course Colors</h2>
+                     <img class="filter-arrow" src="images/expand_gray.svg">
+                  </div>
+                  <div class="filter-content" id="colors">
+                     <h3>Select a course:</h3>
+                     <div id="colorsSections">
+                        <div class="courseNames" id="col">
+                           &nbsp;
+                        </div>
+                        <div id="pickedColDiv">
+                           <p id="colorCourseName"></p>
+                           <div id="pickedColor"><p id="pickedHex">#000000</p></div>
+                        </div>
+                        <div id="colorOptions">
+                           <div class="color-option"></div>
+                           <div class="color-option"></div>
+                           <div class="color-option"></div>
+                           <div class="color-option"></div>
+                           <div class="color-option"></div>
+                           <div class="color-option"></div>
+                           <div class="color-option"></div>
+                           <div class="color-option"></div>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <div class="filter-section">
+                     <h2>Select Sections</h2>
+                     <img class="filter-arrow" src="images/expand_gray.svg">
+                  </div>
+                  <div class="filter-content" id="sections">
+                     <h3>Select a course:</h3>
+                     <div id="sectionsSections">
+                        <div class="courseNames" id="sect">
+                           &nbsp;
+                        </div>
+                        <div id="sectionsDiv">
+                           <p id="sectionCourseName"></p>
+                           <div id="sectionCheckboxes">
+                              &nbsp;
+                           </div>
+                        </div> 
+                     </div>
+                  </div>
+                  
+                  <div class="filter-section">
+                     <h2>Select Times</h2>
+                     <img class="filter-arrow" src="images/expand_gray.svg">
+                  </div>
+                  <div class="filter-content" id="times">
+                     <div class="timesCheckboxes">
+                        <div>
+                           <input class="times" type="checkbox" name="8am" id="8am" checked> 
+                           <label for="8am">8am</label>
+                        </div>
+                        <div>
+                           <input class="times" type="checkbox" name="9am" id="9am" checked>
+                           <label for="9am">9am</label> 
+                        </div>
+                        <div>
+                           <input class="times"type="checkbox" name="10am" id="10am" checked> 
+                           <label for="10am">10am</label>
+                        </div>
+                        <div>
+                           <input class="times" type="checkbox" name="11am" id="11am" checked> 
+                           <label for="11am">11am</label>
+                        </div>
+                        <div>
+                           <input class="times" type="checkbox" name="12pm" id="12pm" checked> 
+                           <label for="12pm">12pm</label>
+                        </div>
+                     </div>
+                     <div class="timesCheckboxes">
+                        <div>
+                           <input class="times" type="checkbox" name="1pm" id="1pm" checked> 
+                           <label for="1pm">1pm</label>
+                        </div>
+                        <div>
+                           <input class="times" type="checkbox" name="2pm" id="2pm" checked> 
+                           <label for="2pm">2pm</label>
+                        </div>   
+                        <div>
+                           <input class="times" type="checkbox" name="3pm" id="3pm" checked> 
+                           <label for="3pm">3pm</label>
+                        </div>
+                        <div>
+                           <input class="times" type="checkbox" name="4pm" id="4pm" checked> 
+                           <label for="4pm">4pm</label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+               <div id="filterFooter">
+                  <button id="resetChangesButton" class="red-button" type="button">Reset Changes</button>
+                  <button id="saveChangesButton"  class="red-button" type="button">Save  Changes</button>
+               </div>
+            </div>
+         </div>
+      </main>
+      
+      <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+      <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+      <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+      <script src="/__/firebase/init.js"></script>
+      <script src="scripts/rosefire-min.js"></script>
+      <script src="scripts/main.js"></script>
+   </body>
+</html>
